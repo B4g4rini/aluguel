@@ -1,0 +1,109 @@
+:root {
+    --primary: #2C3E50;
+    --secondary: #34495E;
+    --accent: #3498DB;
+    --warning: #E74C3C;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f6fa;
+  }
+  
+  .navbar {
+    background: var(--primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    color: white !important;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+  
+  .vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .vehicle-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .vehicle-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: white;
+  }
+  
+  .status-available {
+    background: #2ECC71;
+  }
+  
+  .status-maintenance {
+    background: #F1C40F;
+  }
+  
+  .status-rented {
+    background: #E74C3C;
+  }
+  
+  .vehicle-details {
+    padding: 15px;
+  }
+  
+  .vehicle-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .maintenance-alert {
+    background: #FFF3CD;
+    border-left: 4px solid #FFC107;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
