@@ -1,18 +1,21 @@
-import Footer from '../Components/Footer/Footer'
-import Header from '../Components/Header/Header'
-import Home from '../routes/Home/Home'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Relatorios from "../routes/Relatorios/Relatorios";
+import Veiculos from "../routes/Veiculos/Veiculos";
+import Aluguel from "../routes/Aluguel/Aluguel";
+import Home from "../routes/Home/Home";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <Header></Header>
-      <Footer>
-        
-      </Footer>
-
-    </div>
- 
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/relatorios" element={<Relatorios />} />
+        <Route path="/veiculos" element={<Veiculos />} />
+        <Route path="/aluguel" element={<Aluguel />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

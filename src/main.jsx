@@ -1,23 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './routes/Home/Home';
-import Relatorios from './routes/Relatorios/Relatorios';
-import Veiculos from './routes/Veiculos/Veiculos';
-import Aluguel from './routes/Aluguel/Aluguel';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import App from "./pages/App";
 
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/relatorios" element={<Relatorios />} />
-        <Route path="/veiculos" element={<Veiculos />} />
-        <Route path="/aluguel" element={<Aluguel />} />
-
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
