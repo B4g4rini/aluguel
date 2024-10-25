@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from './Header'; // Importando o componente Header
-import Footer from './Footer'; // Importando o componente Footer
+import Header from '../../Components/Header/Header'; // Importando o componente Header
+import Footer from '../../Components/Footer/Footer'; // Importando o componente Footer
 
 const Veiculos = () => {
   // State para armazenar os dados do veículo
