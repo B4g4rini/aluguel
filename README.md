@@ -19,7 +19,7 @@ Satisfação do Cliente: Ofereça um serviço de locação mais eficiente e pers
 
 ## AUTORES:
 
-PEDRO GONSALVES BAGARINi
+PEDRO GONÇALVES BAGARINI
 
 RUAN SILVA RABAQUIM
 
@@ -28,6 +28,11 @@ RUAN SILVA RABAQUIM
 FIGMA
 
 https://www.figma.com/design/e7E5053QoM2WRt7h67WP6m/Untitled?node-id=4-11&t=7nKc9cay2QpU4ryp-1
+
+
+BANCO DE DADOS 
+
+https://github.com/B4g4rini/ApiProvei
 
 
 GITHUB AUTORES
