@@ -1,52 +1,125 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Header from './Header'; // Importando o componente Header
+import Footer from './Footer'; // Importando o componente Footer
 
-const veiculos = () => {
+const Veiculos = () => {
+  // State para armazenar os dados do veículo
+  const [formData, setFormData] = useState({
+    modelo: '',
+    tipo: '',
+    localizacao: '',
+    ano: '',
+    preco: '',
+  });
+
+  // State para mensagens de feedback
+  const [mensagem, setMensagem] = useState('');
+
+  // Manipulador de eventos para atualizar o estado
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Manipulador de eventos para envio do formulário
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validação simples
+    if (!formData.modelo || !formData.tipo || !formData.localizacao || !formData.ano || !formData.preco) {
+      setMensagem('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    // Simulação de envio de dados (aqui você pode integrar com uma API ou serviço)
+    console.log('Veículo cadastrado:', formData);
+    setMensagem('Veículo cadastrado com sucesso!');
+
+    // Limpar o formulário
+    setFormData({
+      modelo: '',
+      tipo: '',
+      localizacao: '',
+      ano: '',
+      preco: '',
+    });
+  };
+
   return (
-    <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2>Gestão de Veículos</h2>
-      <button class="btn btn-primary" onclick="showAddVehicleModal()">
-        <i class="fas fa-plus me-2"></i>Adicionar Veículo
-      </button>
-    </div>
-    <div class="filter-section">
-    <div class="row">
-      <div class="col-md-3">
-        <label class="form-label">Pátio</label>
-        <select class="form-select" id="locationFilter">
-          <option value="">Todos</option>
-          <option>Pátio Central</option>
-          <option>Pátio Sul</option>
-          <option>Pátio Norte</option>
-        </select>
+    <div className="bg-secondary">
+      <Header />
+      <div className="container mt-5 mb-5">
+        <h2 className="text-center">Cadastro de Veículos</h2>
+        {mensagem && <div className="alert alert-info text-center">{mensagem}</div>}
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="modelo">Modelo</label>
+            <input
+              type="text"
+              className="form-control"
+              id="modelo"
+              name="modelo"
+              value={formData.modelo}
+              onChange={handleChange}
+              placeholder="Digite o modelo do veículo"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="tipo">Tipo</label>
+            <input
+              type="text"
+              className="form-control"
+              id="tipo"
+              name="tipo"
+              value={formData.tipo}
+              onChange={handleChange}
+              placeholder="Digite o tipo do veículo"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="localizacao">Localização</label>
+            <input
+              type="text"
+              className="form-control"
+              id="localizacao"
+              name="localizacao"
+              value={formData.localizacao}
+              onChange={handleChange}
+              placeholder="Digite a localização do veículo"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="ano">Ano</label>
+            <input
+              type="number"
+              className="form-control"
+              id="ano"
+              name="ano"
+              value={formData.ano}
+              onChange={handleChange}
+              placeholder="Digite o ano do veículo"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="preco">Preço</label>
+            <input
+              type="number"
+              className="form-control"
+              id="preco"
+              name="preco"
+              value={formData.preco}
+              onChange={handleChange}
+              placeholder="Digite o preço do veículo"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary mt-3">
+            Cadastrar Veículo
+          </button>
+        </form>
       </div>
-      <div class="col-md-3">
-        <label class="form-label">Status</label>
-        <select class="form-select" id="statusFilter">
-          <option value="">Todos</option>
-          <option>Disponível</option>
-          <option>Em Manutenção</option>
-          <option>Locado</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label class="form-label">Categoria</label>
-        <select class="form-select" id="categoryFilter">
-          <option value="">Todas</option>
-          <option>Econômico</option>
-          <option>Intermediário</option>
-          <option>Luxo</option>
-          <option>SUV</option>
-        </select>
-      </div>
-      
+      <Footer />
     </div>
-    
-    </div>
-    </div>
-    
+  );
+};
 
-  )
-}
-
-export default veiculos
+export default Veiculos;
