@@ -14,19 +14,9 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
 
-            <li className="nav-item">
+            <li class="me-5" className="nav-item">
               <a className="nav-link" href="/veiculos">
-                <i className="fas fa-car"></i> Veículos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/locacoes">
-                <i className="fas fa-key"></i> Locações
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/relatorios">
-                <i className="fas fa-file-alt"></i> Relatórios
+                 Veículos
               </a>
             </li>
           </ul>
