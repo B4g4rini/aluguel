@@ -19,7 +19,8 @@ Satisfação do Cliente: Ofereça um serviço de locação mais eficiente e pers
 
 ## AUTORES:
 
-PEDRO GONSALVES BAGARINE
+PEDRO GONSALVES BAGARINi
+
 RUAN SILVA RABAQUIM
 
 ### 🔗 Links
